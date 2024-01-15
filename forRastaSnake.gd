@@ -2,6 +2,7 @@ extends Node
 
 #system attributes
 var snakeX = 0
+const squareWidth = 900
 var stutteredSnakePositionPrintModulo: float = 0
 const stutteredSnakePositionPrintModuloQuantity: float = 3
 const doStutterdSnakePrint: bool = true
@@ -36,6 +37,7 @@ func movingSnakeTick1_unstable_by_user_defined(delta):
 	snakeX += deltaIncrementation
 	stutteredSnakePositionPrintModulo += deltaIncrementation
 
+
 func movingSnakeTick0(delta):
 	snakeX += delta
 
@@ -58,7 +60,8 @@ func extendingClasses0():
 
 func testingErrorMessagePrints():
 	var errorMsg = "did not work."
-	Main.localSystemError(errorMsg)
+	#Main.localSystemError(errorMsg)
+	printerr(errorMsg)
 	#push_warning(errorMsg)
 	#push_error(errorMsg)		#the red text is better for this so this method works better for my purposes.
 

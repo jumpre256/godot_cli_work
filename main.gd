@@ -15,5 +15,6 @@ func _process(delta):
 		get_tree().quit()
 
 func localSystemError(msg):
-	print("Error: " + msg)
-	push_error(msg)
+	printerr(msg)
+	#printerr("Error: " + msg)
+	###push_error(msg)
