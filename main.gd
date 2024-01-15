@@ -5,11 +5,15 @@ const startTimeoutCLI = 0.9
 const cliExit: bool = false
 
 func _ready():
-	#forRastaSnake.main()
-	pass
+	forRastaSnake.main()
+	#pass
 
 func _process(delta):
 	ticks += delta
 	#print(ticks)
 	if ticks > startTimeoutCLI and cliExit:
 		get_tree().quit()
+
+func localSystemError(msg):
+	print("Error: " + msg)
+	push_error(msg)
