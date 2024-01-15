@@ -2,14 +2,19 @@ extends Node
 
 #system attributes
 var snakeX = 0
+var stutteredSnakePositionPrintModulo: float = 0
+const stutteredSnakePositionPrintModuloQuantity: float = 3
+const doStutterdSnakePrint: bool = true
 
 #local mechanism attributes
+const snakeSpeed = 5.2
 const userTurnMarginDelta = 14
 
 func main():
 	#extendingClasses0()
 	#testingFloats0()
 	#testingErrorMessagePrints()
+	Main.localSystemError("Warning: using an unstable snake turning mechanism.")
 	pass
 
 func _process(delta):
@@ -18,12 +23,18 @@ func _process(delta):
 	
 	
 func movingSnakeTickMain(delta):
-	Main.localSystemError("Warning: using an unstable snake turning mechanism.")
 	movingSnakeTick1_unstable_by_user_defined(delta)
-	print("snakeX: " + str(snakeX))
+	if doStutterdSnakePrint == false:
+		print("snakeX: " + str(snakeX))
+	if doStutterdSnakePrint == true:
+		if stutteredSnakePositionPrintModulo > stutteredSnakePositionPrintModuloQuantity:
+			stutteredSnakePositionPrintModulo = 0
+			print("snakeX: " + str(snakeX))
 
 func movingSnakeTick1_unstable_by_user_defined(delta):
-	pass
+	var deltaIncrementation = delta * snakeSpeed
+	snakeX += deltaIncrementation
+	stutteredSnakePositionPrintModulo += deltaIncrementation
 
 func movingSnakeTick0(delta):
 	snakeX += delta
