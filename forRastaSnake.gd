@@ -1,11 +1,25 @@
 extends Node
 
+var snakeX = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func main():
+	testingFloats0()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
-	pass
+	movingSnakeTickMain(delta)
+	
+	
+func movingSnakeTickMain(delta):
+	movingSnakeTick0(delta)
+	print("snakeX: " + str(snakeX))
+
+func movingSnakeTick0(delta):
+	snakeX += delta
+
+func testingFloats0():
+	if 3.3 > 3.299:
+		print("yes 3.3 is bigger than 3.299")
+	if 3.3 < 3.299:
+		print("Output: true. Error: expected false.")

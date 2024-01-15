@@ -1,13 +1,15 @@
 extends Node
 
 var ticks = 0
-const startTimeout = 0.9
+const startTimeoutCLI = 0.9
+const cliExit: bool = false
 
 func _ready():
-	print("hello world.")
+	#forRastaSnake.main()
+	pass
 
 func _process(delta):
 	ticks += delta
 	#print(ticks)
-	if ticks > startTimeout:
+	if ticks > startTimeoutCLI and cliExit:
 		get_tree().quit()
