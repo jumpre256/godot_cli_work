@@ -1,4 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1705323935
+::res://::1705473697
+forRastaSnake0.gd::GDScript::-1::1705331081::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::7611231795305010859::1705323908::1705323911::1::::<><>::
-main.gd::GDScript::-1::1705324167::0::1::::<>Node<>::
+main.gd::GDScript::-1::1705329846::0::1::::<>Node<>::
+scene.tscn::PackedScene::752985945873953360::1705332777::0::1::::<><>::

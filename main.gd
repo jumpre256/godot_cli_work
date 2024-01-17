@@ -5,7 +5,7 @@ const startTimeoutCLI = 0.9
 const cliExit: bool = false
 
 func _ready():
-	forRastaSnake.main()
+	forRastaSnake0.main()
 	#pass
 
 func _process(delta):
@@ -13,6 +13,15 @@ func _process(delta):
 	#print(ticks)
 	if ticks > startTimeoutCLI and cliExit:
 		get_tree().quit()
+
+func floatModulo(value: float, divider: float) -> float:
+	
+	var returnEntity: float = value
+	while(returnEntity >= 0):	#while !(returnEntity < 0):
+		
+		returnEntity -= divider
+		
+	return returnEntity + divider
 
 func localSystemError(msg):
 	printerr(msg)
