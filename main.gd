@@ -5,8 +5,9 @@ const startTimeoutCLI = 0.9
 const cliExit: bool = false
 
 func _ready():
-	forRastaSnake0.main()
-	#pass
+	#forRastaSnake0.main()
+	forRastaSnake1.main()
+	pass
 
 func _process(delta):
 	ticks += delta

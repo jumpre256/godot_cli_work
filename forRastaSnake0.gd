@@ -23,7 +23,7 @@ func main():
 	pass
 
 func _process(delta):
-	movingSnakeTickMain(delta)
+	#movingSnakeTickMain(delta)
 	if doQuit:
 		quitTicks += 1
 	if quitTicks > 0:
